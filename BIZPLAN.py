@@ -1,11 +1,19 @@
 import streamlit as st
 
+# Introduction Paragraph
+st.markdown(
+    """
+    # Hello, welcome!
+    This app will help you to write a Business Plan for your digital product!
+    Please answer the following questions to get started.
+    """
+)
+
 # Initialize session state to track progress and user inputs
 if "responses" not in st.session_state:
     st.session_state["responses"] = [""] * 4  # Store responses for 4 questions
 if "completed_steps" not in st.session_state:
     st.session_state["completed_steps"] = 0  # Track how many questions have been answered
- 
 
 # Questions and keys
 questions = [
@@ -210,7 +218,7 @@ if st.session_state["completed_steps"] == len(questions):
         .....................................
 
         7. Financial Plan:
-        With the price point of {price}, our target market size, and a solid marketing strategy, we aim to achieve our revenue target of {revenue_target} in the first year while maintaining healthy profit margins.
+        With the price point of {price}, our target market size, and a solid marketing strategy, we aim to achieve our revenue target of {revenue_target} in the first year while maintaining healthy margins.
 
         8. Conclusion:
         This business plan outlines our roadmap for launching and growing our product in the market, driven by a clear understanding of our product, target audience, pricing, and revenue goals.
