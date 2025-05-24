@@ -5,7 +5,7 @@ if "responses" not in st.session_state:
     st.session_state["responses"] = [""] * 4  # Store responses for 4 questions
 if "completed_steps" not in st.session_state:
     st.session_state["completed_steps"] = 0  # Track how many questions have been answered
-Hello!
+ 
 
 # Questions and keys
 questions = [
